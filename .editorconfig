@@ -1,0 +1,20 @@
+root = true
+
+[*]
+charset = utf-8
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{cs,csproj,props,targets}]
+indent_style = space
+indent_size = 4
+
+[*.{json,yml,yaml,slnx}]
+indent_style = space
+indent_size = 2
+
+[*.cs]
+# var khi kiểu đã rõ ràng
+csharp_style_var_when_type_is_apparent = true:suggestion
+# file-scoped hay block-scoped namespace: giữ nguyên phong cách từng file, không ép
+dotnet_diagnostic.IDE0161.severity = none
